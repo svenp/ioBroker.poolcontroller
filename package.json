@@ -1,6 +1,6 @@
 {
   "name": "iobroker.poolcontroller",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "ioBroker poolcontroller Adapter",
   "author": {
     "name": "Michael Voelker",
