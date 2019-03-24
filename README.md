@@ -5,6 +5,8 @@
 This adapter is for reading values ​​from the pool controller. This pool controller is from www.pooldigital.de.
 A demo of the controller can be found at http://demo.poolcontroller.de/gui/phase2/
 ## Changelog
+### 0.2.5 (2019-01-10)
+* (SvenPeitz) Support for comapct mode
 ### 0.2.4
 * (SvenPeitz) rework main, correct time, get user data objects
 ### 0.2.3
