@@ -5,12 +5,25 @@ var utils = require('@iobroker/adapter-core'); // Get common adapter utils
 var request = require('request');
 var adapter = new utils.Adapter('poolcontroller');
 
+function startAdapter(options) {
+    options = options || {};
+    Object.assign(options, {name: adapterName});
+
+    adapter = new utils.Adapter(options);
+	
 adapter.on('ready', function () {
     main();
 });
+});
 
 function main() {
-
+// If started as allInOne/compact mode => return function to create instance
+if (module && module.parent) {
+    module.exports = startAdapter;
+} else {
+    // or start the instance directly
+    startAdapter();
+}
 var host = adapter.config.host
 var port = adapter.config.port
 var result, json;
@@ -300,6 +313,7 @@ request(
 	}
 );
 	setTimeout(function () {
+		 adapter.terminate ? adapter.terminate() : process.exit()
 		adapter.stop();
 	}, 20000);	 				
   
