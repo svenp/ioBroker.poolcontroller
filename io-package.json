@@ -1,8 +1,19 @@
 {
     "common": {
         "name": "poolcontroller",
-        "version": "0.2.4",
+        "version": "0.2.5",
         "news": {
+		"0.2.5": {
+                	"en": "Support for compact mode",
+                	"de": "Unterstützung für den Kompaktmodus",
+                	"ru": "Поддержка компактного режима",
+                	"pt": "Suporte para o modo compacto",
+                	"nl": "Ondersteuning voor de compacte modus",
+                	"fr": "Prise en charge du mode compact",
+                	"it": "Supporto per la modalità compatta",
+                	"es": "Soporte para modo compacto",
+                	"pl": "Obsługa trybu kompaktowego"
+                         },
 		"0.2.4": {
                         "en": "extend main",
                         "de": "Erweiterung main"
@@ -48,6 +59,7 @@
         "schedule": "* * * * *",     
         "icon": "poolcontroller.png",
         "materialize": true,
+	"compact": true,
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/svenp/ioBroker.poolcontroller/master/admin/poolcontroller.png",    
         "keywords": ["poolcontroller", "smarthome", "pool", "pooldaten"],
